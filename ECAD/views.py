@@ -56,5 +56,5 @@ def renderSTL(request, pk):
                     if len(vs) == 3:
                         tris.append(triangle(vs=vs))
                         vs = []
-    return compound('tris')
+    return compound(tris)
  #   return redirect('file_list')
