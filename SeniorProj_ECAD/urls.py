@@ -19,12 +19,15 @@ from django.conf import settings
 from django.conf.urls.static import static
 from ECAD import views
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.Home.as_view(), name='home'),
     path('upload/', views.upload, name='upload'),
     path('files/',views.file_list, name='file_list'),
     path('files/<int:pk>/', views.delete_file, name='delete_file'),
+    path('render/<int:pk>',views.renderSTL, name='renderSTL'),
+
 
 ]
 if settings.DEBUG:
